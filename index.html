@@ -138,10 +138,10 @@
 
                             <!-- 40 seats left -->
 
-                            <div class="">
+                            <div id="seat-left" class="">
                                 <button class="btn bg-[#1DD10026] text-[#1DD100] rounded-lg">
-                                    <img src="images/seat-green.png" alt="">
-                                    40 seats left
+                                    <img  src="images/seat-green.png" alt="">
+                                    8 seats left
                                 </button>
                             </div>
                         </div>
@@ -180,7 +180,7 @@
 
             <!-- bus seat  -->
 
-            <section>
+            <section class="mb-10">
                 <div class="flex justify-center ">
                     <div class="w-1/2">
                         <div class="  my-3">
@@ -195,7 +195,7 @@
                             </div>
                             <button class="btn bg-[#1DD10026] text-[#1DD100] rounded-lg ">
                                 <img src="images/seat-green.png" alt="">
-                                40 seats left
+                                selected
                             </button>
                         </div>
 
@@ -206,23 +206,23 @@
 
                         <div>
                             <div class="flex justify-between items-center py-5">
-                                <div class="">A</div>
+                                <div id="A" class="">A</div>
 
-                                <div class=""><button class="btn btn-active btn-ghost ">A1</button></div>
-                                <div class=""><button class="btn btn-active btn-ghost ">A2</button></div>
+                                <div id="A1" class=""><button class="booking-btn btn btn-active btn-ghost ">A1</button></div>
+                                <div id="A2" class=""><button class="booking-btn btn btn-active btn-ghost ">A2</button></div>
 
-                                <div class=""><button class="btn btn-active btn-ghost ">A3</button></div>
-                                <div class=""><button class="btn btn-active btn-ghost  ">A4</button></div>
+                                <div id="A3" class=""><button class="booking-btn btn btn-active btn-ghost ">A3</button></div>
+                                <div id="A4" class=""><button class="booking-btn btn btn-active btn-ghost  ">A4</button></div>
 
                             </div>
                             <div class="flex justify-between items-center py-5">
-                                <div class="">B</div>
+                                <div id="B" class="">B</div>
 
-                                <div class=""><button class="btn btn-active btn-ghost ">B1</button></div>
-                                <div class=""><button class="btn btn-active btn-ghost ">B2</button></div>
+                                <div id="B1" class=""><button class="booking-btn btn btn-active btn-ghost ">B1</button></div>
+                                <div id="B2" class=""><button class="booking-btn btn btn-active btn-ghost ">B2</button></div>
 
-                                <div class=""><button class="btn btn-active btn-ghost ">B3</button></div>
-                                <div class=""><button class="btn btn-active btn-ghost ">B4</button></div>
+                                <div id="B3" class=""><button class="booking-btn btn btn-active btn-ghost ">B3</button></div>
+                                <div id="B4" class=""><button class="booking-btn btn btn-active btn-ghost ">B4</button></div>
 
                             </div>
                             <!-- <div class="flex justify-between items-center py-5">
@@ -256,7 +256,7 @@
                         </div>
 
 
-                        <div class="py-2">
+                        <div class="py-2 bg-[#F7F8F8] p-4 rounded-3xl mt-5">
                             <div class="border-dashed border-b-2 border-gray-400  flex justify-between py-4 ">
                                 <h4>seat</h4>
                                 <h4>class</h4>
@@ -275,8 +275,17 @@
                                 <p>BDT 0</p>
 
                             </div>
+                            <div class=" flex justify-between items-center">
+                                <input class="h-15  " type="text" name="" id="" placeholder="Have any coupon?">
+                                <button class="btn  w-30  bg-[#1DD100] text-white">Apply</button>
+                            </div>
+                            <div class="flex justify-between py-4">
+                                <h3>Grand Total </h3>
+                                <p>BDT 0</p>
+
+                            </div>
                             <div>
-                                <input type="text" name="" id="" placeholder="Have any coupon?">
+                                <button class="btn bg-[#1DD100] text-white  w-full">Next</button>
                             </div>
                         </div>
 
@@ -290,6 +299,7 @@
         </footer>
 
     </section>
+    <script src="js/utilits.js"></script>
     <script src="js/js.js"></script>
     <script src="js/tailwind.config.js"></script>
 </body>
