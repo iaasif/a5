@@ -34,28 +34,33 @@ for (let singleBtn of btns) {
 
 
 
-
-
-
-
-
-
-
-
-
                 const addedSeatSeaction = document.getElementById('added-seat-seaction');
+                // const newDiv = document.createElement('div');
+                // addedSeatSeaction.append(newDiv)
+
                 console.log(addedSeatSeaction);
 
-                const h4Element = document.createElement('h4');
-                h4Element.textContent = ticket;
-                addedSeatSeaction.appendChild(h4Element);
 
-                const pElemetn = document.createElement('p');
-                pElemetn.
+                function seatAdded() {
+                    // addedSeatSeaction.innerHTML = "<h4> ${ticket}</h4> <h4>Economoy</h4> <h4>550</h4> "
+                    const h4Element = document.createElement('h4');
+                    h4Element.textContent = ticket;
+                    addedSeatSeaction.appendChild(h4Element);
+
+                    const pElemetn = document.createElement('p');
+                    pElemetn.textContent = "Economy";
+                    addedSeatSeaction.appendChild(pElemetn);
+
+                    const h4Element2 = document.createElement('h4');
+                    h4Element2.textContent = parseInt(550);
+                    addedSeatSeaction.appendChild(h4Element2);
 
 
+                }
 
 
+                // newDiv.appendChild(seatAdded());
+                seatAdded()
 
                 // const h4 = document.createElement("h4");
                 // addedSeatSeaction.innerHTML = h4;
@@ -89,6 +94,4 @@ function seatLeft() {
 
 
 
-function seatAdded() {
-    addedSeatSeaction.innerHTML = "<h4> ${ticket}</h4> <h4>Economoy</h4> <h4>550</h4> ";
-}
+
