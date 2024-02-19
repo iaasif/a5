@@ -38,7 +38,7 @@ for (let singleBtn of btns) {
                 // const newDiv = document.createElement('div');
                 // addedSeatSeaction.append(newDiv)
 
-                console.log(addedSeatSeaction);
+                // console.log(addedSeatSeaction);
 
 
                 function seatAdded() {
@@ -54,6 +54,8 @@ for (let singleBtn of btns) {
                     const h4Element2 = document.createElement('h4');
                     h4Element2.textContent = parseInt(550);
                     addedSeatSeaction.appendChild(h4Element2);
+
+
 
 
                 }
@@ -74,8 +76,54 @@ for (let singleBtn of btns) {
                 alert("can't select more than 4 ticket");
             }
 
+            couponApply = document.getElementById("cupon-apply");
+
+            couponApply.addEventListener("click", function () {
+                let price = selectedTicket * 550;
+                console.log("price " + price);
+
+                priceId = document.getElementById("price-id");
+                priceId.innerText = price;
+                // done
+
+
+                let cupon15 = "NEW15";
+                let cupon20 = "Couple 20";
+                let couponInputElement = document.getElementById("coupon-input");
+                console.log("a" + couponInputElement.value);
+
+                // console.log(couponInputElement);
+
+
+                grandTotalElement = document.getElementById("Grand-total");
+                let grandTotal = parseInt(grandTotalElement.innerText);
+                // console.log(grandTotalElement);
+                // console.log(grandTotalElement.innerText+2);
+                console.log("grandTotal" + grandTotal);
+
+
+                if (couponInputElement.value === cupon15) {
+                    grandTotal = (price - (price * 0.15));
+                    grandTotalElement.innerText = grandTotal;
+                }
+                else if (couponInputElement.value === cupon20) {
+                    grandTotal = (price - (price * 0.20));
+                    grandTotalElement.innerText = grandTotal;
+                }
+                else {
+                    grandTotalElement.innerText = price;
+                }
+
+                couponApply.classList.add("hidden");
+                couponInputElement.classList.add("hidden");
+            })
+
+
+            
+
         }
-        // singleBtn.classList.add("bg-[#1DD100]");    
+        // singleBtn.classList.add("bg-[#1DD100]");
+        
     });
 
 }
@@ -89,6 +137,22 @@ function seatLeft() {
     console.log(seatLeft);
     seatLeftElement.innerText = seatLeft;
 }
+
+
+const nextBtn = document.getElementById("next");
+        console.log(nextBtn);
+        nextBtn.document.addEventListener('click', function () {
+            let success = document.getElementById("success");
+
+            success.classList.remove("hidden");
+            console.log(success.classList);
+            let upperSection = document.getElementById("upper-section");
+            console.log(upperSection);
+            upperSection.classList.add("hidden");
+
+
+
+        })
 
 
 
