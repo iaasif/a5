@@ -34,6 +34,36 @@ for (let singleBtn of btns) {
 
 
 
+
+
+
+
+
+
+
+
+
+                const addedSeatSeaction = document.getElementById('added-seat-seaction');
+                console.log(addedSeatSeaction);
+
+                const h4Element = document.createElement('h4');
+                h4Element.textContent = ticket;
+                addedSeatSeaction.appendChild(h4Element);
+
+                const pElemetn = document.createElement('p');
+                pElemetn.
+
+
+
+
+
+                // const h4 = document.createElement("h4");
+                // addedSeatSeaction.innerHTML = h4;
+
+                // addedSeatSeaction.innerHTML = h4;
+                // addedSeatSeaction.innerHTML = h4;
+
+
             }
             else {
                 alert("can't select more than 4 ticket");
@@ -53,4 +83,12 @@ function seatLeft() {
     seatLeft = seatLeft - 1;
     console.log(seatLeft);
     seatLeftElement.innerText = seatLeft;
+}
+
+
+
+
+
+function seatAdded() {
+    addedSeatSeaction.innerHTML = "<h4> ${ticket}</h4> <h4>Economoy</h4> <h4>550</h4> ";
 }
