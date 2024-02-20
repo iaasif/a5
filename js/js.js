@@ -31,6 +31,14 @@ for (let singleBtn of btns) {
                 selectedTicket++;
                 console.log("selected ticket " + selectedTicket);
                 seatLeft();
+                // if (selectedTicket >= 1) {
+                //     let nextBtnElement = document.getElementById("next");
+                //     // nextBtnElement.classList.remove("disabled");
+                //     console.log("here" + nextBtnElement.classList);
+                // }
+                // else {
+                //     return;
+                // }
 
 
 
@@ -54,15 +62,22 @@ for (let singleBtn of btns) {
                     const h4Element2 = document.createElement('h4');
                     h4Element2.textContent = parseInt(550);
                     addedSeatSeaction.appendChild(h4Element2);
-
-
-
-
                 }
 
 
                 // newDiv.appendChild(seatAdded());
+
                 seatAdded()
+                let btnSeatElement = document.getElementById("btn-seat");
+                btnSeatElement.innerText = selectedTicket;
+
+
+                // let btnSeat = parseInt(btnSeatElement.innerText);
+                // console.log(btnSeatElement.innerText);
+
+
+                // btnSeat= 
+                // console.log("btn seat "+ btnSeat);
 
                 // const h4 = document.createElement("h4");
                 // addedSeatSeaction.innerHTML = h4;
@@ -114,16 +129,15 @@ for (let singleBtn of btns) {
                     grandTotalElement.innerText = price;
                 }
 
-                couponApply.classList.add("hidden");
-                couponInputElement.classList.add("hidden");
+
             })
 
 
-            
+
 
         }
         // singleBtn.classList.add("bg-[#1DD100]");
-        
+
     });
 
 }
@@ -138,24 +152,40 @@ function seatLeft() {
     seatLeftElement.innerText = seatLeft;
 }
 
+// next button function 
+// const nextBtn = document.getElementById("next");
+// console.log(nextBtn);
 
-const nextBtn = document.getElementById("next");
-        console.log(nextBtn);
-        nextBtn.document.addEventListener('click', function () {
-            let success = document.getElementById("success");
+// nextBtn.document.addEventListener('click', function () {
+//     console.log("clicked");
 
-            success.classList.remove("hidden");
-            console.log(success.classList);
-            let upperSection = document.getElementById("upper-section");
-            console.log(upperSection);
-            upperSection.classList.add("hidden");
+//     let success = document.getElementById("success");
 
-
-
-        })
-
+//     success.classList.remove("hidden");
+//     console.log(success.classList);
+//     let upperSection = document.getElementById("upper-section");
+//     console.log(upperSection);
+//     upperSection.classList.add("hidden");
 
 
 
+// })
+
+
+
+
+// next button function 
+couponApply.classList.add("hidden");
+couponInputElement.classList.add("hidden");
+function nextBtn() {
+    let upperSection = document.getElementById("upper-section");
+    console.log(upperSection.classList);
+    upperSection.classList.add("hidden");
+
+    let success = document.getElementById("success");
+    console.log(success);
+    success.classList.remove("hidden");
+    console.log(success.classList);
+}
 
 
